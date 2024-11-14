@@ -1,0 +1,91 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.search {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+.search input {
+    border: 2px solid #ccc;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+.search input:focus {
+    border-color: #0078ff;
+}
+.search button {
+    border: none;
+    background: #0078ff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+.search button:hover {
+    background: #005fcc;
+}
+.weather, .forecast {
+    margin-top: 20px;
+    text-align: center;
+}
+.city {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+.temp {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: black;
+}
+.details p, .forecast-day {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: black;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+.forecast {
+    margin-top: 30px;
+}
+.forecast-days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.forecast-day {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
