@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather App</title>
-        <link rel="stylesheet" href="styles.css">
-
-        
-    </head>
-    <body>
-        <div class="search">
-            <input type="text" placeholder="Enter City Name" spellcheck="false"> 
-            <button>Search</button>
-        </div>
-        <div class="weather">
-            <h2 class="city">City Name</h2>
-            <img class="icon" src="" alt="Weather Icon" style="display:none;">
-            <h1 class="temp">- °C</h1>
-            <div class="details">
-                <p><strong>Humidity:</strong> <span class="humidity">-</span>%</p>
-                <p><strong>Wind Speed:</strong> <span class="wind-speed">-</span> m/s</p>
-                <p><strong>Pressure:</strong> <span class="pressure">-</span> hPa</p>
-                <p><strong>Sunrise:</strong> <span class="sunrise">-</span></p>
-                <p><strong>Sunset:</strong> <span class="sunset">-</span></p>
-            </div>
-        </div>
-        <div class="forecast">
-            <h3>3-Day Forecast</h3>
-            <div class="forecast-days"></div>
-        </div>
-        <script src="script.js"></script>
-
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Dynamic Weather App</title>
+  </head>
+<body>
+    <div id="searchContainer">
+        <input type="text" id="cityInput" placeholder="Enter City Name">
+        <button id="searchBtn">Search</button>
+        <h1 id="city"></h1>
+        <p id="temp"></p>
+        <p id="humidity"></p>
+        <p id="condition"></p>
+        <div id="forecast"></div>
+        <div id="tempChart"></div>
+        <div id="humidityChart"></div>
+    </div>
+    <div id="loadingContainer" class="loading">
+        <div class="spinner"></div>
+        <p>Loading data...</p>
+    </div>
+    <div id="chartContainer">
+        <div id="tempChart"></div>
+        <div id="humidityChart"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
 </html>
